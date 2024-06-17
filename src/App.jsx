@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Home, Login, Register } from './pages'
+import { Home, Login, ProtectedRouter, Register } from './pages'
 import { AuthProvider } from './context/AuthProvider'
 
 
@@ -13,7 +12,13 @@ function App() {
 
       <AuthProvider>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route
+            path='/'
+            element={
+              <ProtectedRouter>
+                <Home />
+              </ProtectedRouter>
+            } />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>

@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 .env
+React & Firebase Login con API Context (Firebase Authentication) y Tailwindcss - YouTube
 
 # Editor directories and files
 .vscode/*
